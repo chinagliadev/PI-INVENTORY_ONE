@@ -80,62 +80,113 @@
 
             </section>
 
-            <div class="modal modal-lg fade" id="modalProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-                aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
+            <div class="modal fade" id="modalProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="modalProdutoLabel" aria-hidden="true">
+
+                <div class="modal-dialog modal-xl modal-dialog-scrollable">
+                    <div class="modal-content rounded-4 shadow">
+
+                        <div class="modal-header border-0 pb-0 px-4">
                             <div>
-                                <h5 class="modal-title fs-5 mb-1" id="staticBackdropLabel">
+                                <h5 class="modal-title fw-bold" id="modalProdutoLabel">
+                                    <i class="bi bi-box-seam me-2"></i>
                                     Cadastro de Produto
                                 </h5>
                                 <small class="text-muted">
-                                    Preencha os dados abaixo para cadastrar um novo produto
+                                    Preencha os dados para cadastrar um novo produto
                                 </small>
                             </div>
-
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
-                            </button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                            
                         </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <div class="row mb-3">
-                                    <div class="col-12 col-md-4">
-                                        <label for="txtProduto" class="form-label">Produto</label>
-                                        <input id="txtProduto" name="produto" type="text" class="form-control" placeholder="Notebook, Celular...">
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <label for="txtImei" class="form-label">IMEI</label>
-                                        <input id="txtImei" name="imei" type="text" class="form-control" placeholder="">
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <label for="txtDocumentoNf" class="form-label">Documento NF</label>
-                                        <input id="txtDocumentoNf" name="documento_nf" type="text" class="form-control" placeholder="">
-                                    </div>
+                        <div class="modal-body px-4">
+
+                            <h6 class="fw-semibold text-primary mb-3">Informações do Produto</h6>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <label class="form-label">Produto</label>
+                                    <input type="text" class="form-control" placeholder="Notebook, Celular...">
                                 </div>
-                                <div class="row">
-                                    <div class="col-12 col-md-4">
-                                        <label for="txtModelo" class="form-label">Modelo</label>
-                                        <input id="txtModelo" name="modelo" type="text" class="form-control" placeholder="">
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <label for="txtNumeroFabrica" class="form-label">Ean ou Numero de Fabrica</label>
-                                        <input id="txtNumeroFabrica" name="numero_fabrica" type="text" class="form-control" placeholder="">
-                                    </div>
-                                    <div class="col-12 col-md-4">
-                                        <label for="txtDocumentoNf" class="form-label">Documento NF</label>
-                                        <input id="txtDocumentoNf" name="documento_nf" type="text" class="form-control" placeholder="">
-                                    </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">IMEI</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Documento NF</label>
+                                    <input type="text" class="form-control">
                                 </div>
                             </div>
+
+                            <h6 class="fw-semibold text-primary mb-3">Detalhes Técnicos</h6>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-4">
+                                    <label class="form-label">Modelo</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">EAN ou Nº de Fábrica</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Marca</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <h6 class="fw-semibold text-primary mb-3">Responsável</h6>
+
+                            <div class="row g-3 mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">TI / Supervisor</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label">Configuração</label>
+                                    <input type="text" class="form-control" placeholder="Ex: 8GB RAM / SSD 256GB">
+                                </div>
+                            </div>
+
+                            <h6 class="fw-semibold text-primary mb-3">Dados da Compra</h6>
+
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <label class="form-label">Data da Compra</label>
+                                    <input type="date" class="form-control">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Número de Série</label>
+                                    <input type="text" class="form-control">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="form-label">Valor da Compra</label>
+                                    <input type="number" step="0.01" class="form-control" placeholder="R$ 0,00">
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                            <button type="button" class="btn-inventory-primario">Salvar Produto</button>
+
+                        <div class="modal-footer border-0">
+                            <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+                                Cancelar
+                            </button>
+                            <button type="button" class="btn-inventory-primario px-4">
+                                Salvar Produto <i class="bi bi-floppy2-fill"></i>
+                            </button>
                         </div>
+
                     </div>
                 </div>
             </div>
+            div>
 
         </main>
     </div>
