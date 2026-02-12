@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InventoryOne</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="./css/configuracao.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <main class="row">
+            <section class="container menu col-2 text-center">
+                <div class="container_imagem_menu text-center mt-3">
+                    <img class="img-fluid imagem_logo"
+                        src="./img/Gemini_Generated_Image_wguaigwguaigwgua-removebg-preview 1@2x.png"
+                        alt="Logo Sistema">
+                    <hr>
+                </div>
+                <div class="text-start w-100 botoes_navegacao">
+                    <div class="text-start w-75">
+                        <a class="botao_navegar botao_dashboard" href="./cadastro_pessoas.html"><i
+                                class="bi bi-clipboard-data icone_navegacao"></i>
+                            Dashboard</a>
+                    </div>
+                    <div class="text-start w-75">
+                        <a class="botao_navegar" href=""><i class="bi bi-inbox icone_navegacao"></i> Inventário</a>
+                    </div>
+                    <div class="text-start w-75">
+                        <a class="botao_navegar" href=""><i class="bi bi-phone icone_navegacao"></i> Produto</a>
+                    </div>
+                    <div class="text-start w-75">
+                        <a class="botao_navegar" href=""><i class="bi bi-person icone_navegacao"></i> Vendedores</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="conteudo_principal col-10">
+                <div class="row px-3 ">
+                    <div class="container_pesquisa sombra">
+                        <div class="input-group espaco_pesquisar">
+                            <input class="form-control input_pesquisar" type="text" placeholder="PESQUISAR">
+                            <button class="btn botao_pesquisar" type="submit"><i class="bi bi-search"></i></button>
+                        </div>
+                        <div class="conteudo_usuario d-flex align-items-center gap-3">
+                            <i class="bi bi-person-fill fs-1"></i>
+
+                            <div class="conteudo_identificacao">
+                                <p class="nome_usuario mb-0">MURILO BREVI</p>
+                                <p class="email_usuario mb-0">murilo@admin.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="apresentacao mt-3 px-3 d-flex justify-content-between align-items-center">
+
+                    <div class="apresentacao-textos">
+                        <h1 class="font-header-3 fw-semibold">Produtos</h1>
+                        <p class="font-subtitulo-2 text-body-tertiary">
+                            Aqui você pode visualizar, cadastrar, editar e remover os produtos do sistema.
+                        </p>
+                    </div>
+
+
+                    <div class="apresentacao-botoes">
+                        <button class="btn-inventory-primario" data-bs-toggle="modal" data-bs-target="#modalProduto"><i
+                                class="bi bi-plus"></i> Novo Produto</button>
+                    </div>
+
+                </section>
+
+            </section>
+
+            <div class="modal modal-lg fade" id="modalProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div>
+                                <h5 class="modal-title fs-5 mb-1" id="staticBackdropLabel">
+                                    Cadastro de Produto
+                                </h5>
+                                <small class="text-muted">
+                                    Preencha os dados abaixo para cadastrar um novo produto
+                                </small>
+                            </div>
+
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row mb-3">
+                                    <div class="col-12 col-md-4">
+                                        <label for="txtProduto" class="form-label">Produto</label>
+                                        <input id="txtProduto" name="produto" type="text" class="form-control" placeholder="Notebook, Celular...">
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label for="txtImei" class="form-label">IMEI</label>
+                                        <input id="txtImei" name="imei" type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label for="txtDocumentoNf" class="form-label">Documento NF</label>
+                                        <input id="txtDocumentoNf" name="documento_nf" type="text" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-4">
+                                        <label for="txtModelo" class="form-label">Modelo</label>
+                                        <input id="txtModelo" name="modelo" type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label for="txtNumeroFabrica" class="form-label">Ean ou Numero de Fabrica</label>
+                                        <input id="txtNumeroFabrica" name="numero_fabrica" type="text" class="form-control" placeholder="">
+                                    </div>
+                                    <div class="col-12 col-md-4">
+                                        <label for="txtDocumentoNf" class="form-label">Documento NF</label>
+                                        <input id="txtDocumentoNf" name="documento_nf" type="text" class="form-control" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <button type="button" class="btn-inventory-primario">Salvar Produto</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./js/produto.js"></script>
+</body>
+
+</html>
