@@ -12,7 +12,12 @@
 
 .font-subtitulo-2{
     font-size: 16px;
-    font-size: 500;
+    font-weight: 500;
+}
+
+.font-body-3{
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .sombra{
@@ -23,9 +28,10 @@
     background-color: #2F4E7C;
     color: white;
     border: none;
-    padding: 8px;
+    padding: 6px;
     border-radius: 8px;
     transition: 0.3s;
+    width: 100%;
 }
 
 .btn-inventory-primario:hover{
